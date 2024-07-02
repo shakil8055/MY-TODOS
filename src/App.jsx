@@ -6,25 +6,11 @@ function App() {
   let [todo,setTodo]=useState([
     {
     id:1,
-    title:" Office Task-1",
-    description:"This is the description for my first task",
-    
-
+    title:" Shakil task ",
+    description:" This is the description for task",
+    status: "",
   },
-  {
-    id:2,
-    title:" Office Task-2",
-    description:"This is the description for my second task",
-    status:true
-    
-  },
-  {
-    id:3,
-    title:" Office Task-3",
-    description:"This is the description for my third task",
-    status:false
-    
-  }
+  
 ])
 let [completed,setCompleted]=useState("All")
   return <>

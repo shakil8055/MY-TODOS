@@ -34,6 +34,7 @@ function TopBar({ todo, setTodo, completed, setCompleted }) {
     setTitle('');
     setDescription('');
   };
+  
 
   return (
     <>
@@ -86,12 +87,13 @@ function TopBar({ todo, setTodo, completed, setCompleted }) {
         <div>
           <h4 className="fw-bold">
             Status Filter :{' '}
+            
             <span>
               {' '}
               <div className="btn-group">
                 <button
-                  className="btn btn-success btn-sm dropdown-toggle"
-                  type="button"
+                  className="btn btn-success dropdown-toggle"
+                  type=""
                   data-bs-toggle="dropdown"
                   aria-expanded="true"
                 >

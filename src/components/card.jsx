@@ -1,19 +1,20 @@
 import React from 'react';
 
 
-function Cards({ todo, setTodo, onEdit }) {
+function Cards({ todo, setTodo, Completed, setCompletedTodo, onEdit }) {
   let Delete = () => {
     setTodo((prevTodo) =>
       prevTodo.filter((item) => item.id !== todo.id)
     );
   };
-  const handleDrop = (e) => {
+  const handleDropStatus = (e) => {
     let status = e.target.innerText;
-    setCompleted(status === 'Completed' ? ' Completed' : 'Not completed');
-  };
+    setCompletedTodo(status === 'Completed' ? ' Completed' : 'Not completed')
+    };
+  
 
   return (
-    <div className="col-10 col-lg-4 col-md-5 mx-auto">
+    <div className="col-10 col-lg-3 col-md-5 mx-auto">
       <div className="card" style={{ width: '18rem', fontWeight: 500, margin: 10 }}>
         <div className="card-body">
           <h5 className="card-title">Name:{todo.title}</h5>
@@ -23,15 +24,15 @@ function Cards({ todo, setTodo, onEdit }) {
              <span>
               <div className='btn-group'>
              <button
-              className="btn btn-secondary dropdown-toggle"
+              className="btn btn-primary dropdown-toggle"
               role="button"
               data-bs-toggle="dropdown"
               aria-expanded="true" >
-                          {todo.completed ? "completed"  : "Not Completed" }
+              {todo.status ?  'Completed' : 'Not Completed' }
              </button> 
-             <ul className="dropdown-menu">
-              <li> <a onClick={handleDrop}>Completed</a> </li>
-              <li> <a onClick={handleDrop}>Not Completed</a></li>
+                <ul className="dropdown-menu">
+              <li> <a onClick={handleDropStatus}>Completed</a> </li>
+              <li> <a onClick={handleDropStatus}>Not Completed</a></li>
              </ul>
           </div>
           </span>
