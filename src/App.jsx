@@ -8,8 +8,9 @@ function App() {
     id:1,
     title:" Shakil task ",
     description:" This is the description for task",
-    status: "",
+    status: "Not completed",
   },
+ 
   
 ])
 let [completed,setCompleted]=useState("All")
