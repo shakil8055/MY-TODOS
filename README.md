@@ -11,6 +11,7 @@ Create a Todo App which have All CRUD Functionalities
 > There should be filter to display status completed, not completed and
 
 output: https://sha-my-todos.netlify.app
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
